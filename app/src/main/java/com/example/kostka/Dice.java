@@ -30,8 +30,9 @@ public class Dice {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setValue() {
+        this.value = (int) (Math.random() * 6 + 1);
+        this.imageId = diceImageIds.get(this.value - 1);
     }
 
     public int getImageId() {
